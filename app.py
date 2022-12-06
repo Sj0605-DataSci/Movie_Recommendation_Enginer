@@ -24,6 +24,22 @@ movies_dict = pickle.load(open('movies.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 simi = pickle.load(open('simi.pkl','rb'))
 
+def set_bg_hack_url():
+
+    st.markdown(
+        f"""
+         <style>
+         .stApp {{
+             background: url("https://149695847.v2.pressablecdn.com/wp-content/uploads/2019/04/ntflxx.png");
+             background-size: cover
+         }}
+         </style>
+         """,
+        unsafe_allow_html=True
+    )
+
+set_bg_hack_url() 
+
 st.title("Movie Recommendation Engine")
 selected_movie_name = st.selectbox('How would you like to be connected?',movies['title'].values)
 
