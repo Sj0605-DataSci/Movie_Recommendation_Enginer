@@ -41,7 +41,7 @@ def set_bg_hack_url():
 set_bg_hack_url() 
 
 st.title("Movie Recommendation Engine")
-selected_movie_name = st.selectbox('How would you like to be connected?',movies['title'].values)
+selected_movie_name = st.selectbox('Select any movie',movies['title'].values)
 
 if st.button('Recommend'):
     names,posters=recommend(selected_movie_name)
