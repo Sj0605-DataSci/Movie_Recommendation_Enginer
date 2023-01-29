@@ -24,6 +24,13 @@ movies_dict = pickle.load(open('movies.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 simi = pickle.load(open('simi.pkl','rb'))
 
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("style/style.css")
+
 def set_bg_hack_url():
 
     st.markdown(
